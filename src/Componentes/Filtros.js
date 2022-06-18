@@ -66,7 +66,7 @@ export default class Filtros extends React.Component {
   })
 
   .filter(produto =>{
-    return this.state.query3 === " " || produto.price >= this.state.query3
+    return this.state.query3 === " " || produto.price <= this.state.query3
   })
 
   .map(produto => {
