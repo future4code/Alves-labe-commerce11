@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+ 
+/* PRODUTO */
+
+.Produto_container
+{
+ display: grid;
+ grid-template-columns: auto auto auto auto;
+ justify-content: space-between;
+ row-gap: 30px;
+ column-gap: 30px;
+ padding: 0 20px;
+}
+
+.Produto
+{
+  background-color: #efefef;
+  width: 250px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.Produto_img {width: 180px; }
+.Produto_nome { font: 500 19px Arial; }
+.Produto_preco { text-align: left; margin: 10px; font: 700 20px Arial; }

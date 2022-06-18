@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* PRODUTO */
+.produto_container 
+{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
+  row-gap: 30px;
+  column-gap: 30px;
+  padding: 0 20px;
+}
+
+.produto 
+{
+  background-color: #efefef;
+  width: 250px;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.produto_img { width: 180px; }
+.produto.nome { font: 500 19px Arial; }
+.produto_preco { text-align: left; margin: 10px; font: 700 20px Arial; }
