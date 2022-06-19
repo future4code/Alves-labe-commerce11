@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Produto from './Componentes/Produtos';
+import Filtros from './Componentes/Filtros';
+import Carrinho from './Componentes/Carrinho';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+
+  render() {
+
+    return (
+      <div className="containerPai">
+        
+         <Filtros>
+
+          <h1>Filtros</h1>
+          <input placeholder="Pesquisa" value= {this.state.query} onChange={this.novoQuery}/>
+          <input type="number" placeholder="Preço Máximo" value= {this.state.query2} onChange={this.novoQuery2}/>
+          <input type="number" placeholder="Preço Mínimo" value= {this.state.query3} onChange={this.novoQuery3}/>
+
+
+        </Filtros>
+
+        <Produto>
+          {this.state.produtos
+
+          .filter(produto =>{
+          return produto.title.toLowerCase().includes(this.state.query.toLowerCase())
+          })
+
+          .filter(produto =>{
+          return this.state.query2 === " " || produto.price >= this.state.query2
+          })
+
+          .filter(produto =>{
+          return this.state.query3 === " " || produto.price <= this.state.query3
+          })
+
+          .map(produto => {
+          return <card key={seilaoq} produto={produto}/>
+          })
+          }
+
+        </Produto>
+          
+      </div>
+    );
+  }
+  
 }
 
 export default App;
