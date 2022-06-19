@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "build": "^0.1.4",
+    "surge": "^0.23.1"
+  }
+}
