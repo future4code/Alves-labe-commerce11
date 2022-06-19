@@ -1,5 +1,5 @@
 import React from "react";
-/*
+
 class Produto extends React.Component{
    qty: 0
 };
@@ -13,11 +13,17 @@ adicionaProduto(){
 removeProduto(){
     this.setState({
         qty: this.state.qty - 1
-    });
-}
+    })
+};
 
 somaProduto(){
+    state = {
+        contador: 0,
+    }
+    addSoma = () => {
+        this.setState({
+            contador: this.state.contador + 1,
+        })
+    }
+};
 
-}
-deixei comentado pra não bugar ninguem
-*/
