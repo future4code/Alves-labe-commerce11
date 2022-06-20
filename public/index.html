@@ -24,44 +24,6 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <div id="root"></div>
 
-    <script type="text/babel">
-    var loja = {
-      nomeApp:"Loja Espaco"
-    };
-
-    class ProdutoFactory {
-      constructor(nome, preco, img) {
-        this.nome = nome;
-        this.preco = preco;
-        this.img = img;
-      }
-    }
-
-    let produto1 = new ProdutoFactory("Camisa Espaco", 100, "img/p1.jpg");
-    let produto2 = new ProdutoFactory("Camisa Espaco", 100, "img/p2.jpg");
-    let produto3 = new ProdutoFactory("Camisa Espaco", 100, "img/p3.jpg");
-    let produto4 = new ProdutoFactory("Camisa Espaco", 100, "img/p4.jpg");
-
-    function content(props) {
-      return (
-        <main>
-         <h2>Camisas Espaco</h2>
-          <section>
-           <div>
-            <img src="" alt=""/>
-            <p></p>
-            <p></p>
-           </div>
-          </section>
-        </main>
-      );
-    }
-
-    </script>
   </body>
 </html>
